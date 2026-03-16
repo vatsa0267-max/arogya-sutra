@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Arogya Sutra – Nature Cure & Yoga Clinic</title>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 <style>
   :root {
     --green-deep: #1a3a1f;
@@ -845,14 +846,10 @@
           </button>
         </div>
 
-        <!-- UPI QR CODE -->
+        <!-- UPI QR CODE — generated in browser, no external service -->
         <div style="background:#fff;border-radius:16px;padding:20px;margin-bottom:12px;text-align:center;">
           <div style="font-size:0.75rem;color:#666;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;font-weight:700;">📷 Scan to Pay ₹500</div>
-          <img
-            src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=7758026980@ybl%26pn=ArogyaSutra%26am=500%26cu=INR%26tn=NatureCureConsultation"
-            alt="UPI QR Code - Scan to pay ₹500"
-            style="width:180px;height:180px;border-radius:8px;display:block;margin:0 auto 12px;"
-          />
+          <div id="upi-qr" style="display:inline-block;border-radius:8px;overflow:hidden;margin:0 auto 12px;"></div>
           <div style="font-size:0.8rem;color:#1a3a1f;font-weight:700;">7758026980@ybl</div>
           <div style="font-size:0.72rem;color:#888;margin-top:4px;">Open any UPI app → Scan QR → Pay ₹500</div>
         </div>
@@ -1049,9 +1046,25 @@
 
 <script>
   // ═══════════════════════════════════════════════
-  // SECURITY: Input sanitization helper
-  // Strips HTML tags to prevent XSS attacks
+  // UPI QR CODE — generated locally using qrcodejs
   // ═══════════════════════════════════════════════
+  let qrGenerated = false;
+  function generateQR() {
+    if (qrGenerated) return;
+    const el = document.getElementById('upi-qr');
+    if (!el) return;
+    new QRCode(el, {
+      text: 'upi://pay?pa=7758026980@ybl&pn=ArogyaSutra&am=500&cu=INR&tn=NatureCureConsultation',
+      width: 180,
+      height: 180,
+      colorDark: '#1a3a1f',
+      colorLight: '#ffffff',
+      correctLevel: QRCode.CorrectLevel.H
+    });
+    qrGenerated = true;
+  }
+
+
   function sanitize(str) {
     const div = document.createElement('div');
     div.appendChild(document.createTextNode(str));
@@ -1194,6 +1207,7 @@
     document.getElementById('s2-label').style.color = 'var(--gold)';
     document.getElementById('s2-label').style.fontWeight = '700';
     document.getElementById('line1').style.background = '#8fb84a';
+    generateQR();
     window.scrollTo({ top: document.getElementById('booking').offsetTop - 80, behavior: 'smooth' });
   }
 
