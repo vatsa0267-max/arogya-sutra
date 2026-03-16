@@ -1209,47 +1209,39 @@
     btn.disabled = true;
     btn.textContent = 'Saving...';
 
-    // ── SEND TO GOOGLE SHEETS via hidden iframe (most reliable method) ──
-    const FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSfOo-oK3lAXlTXxNn0afqDKWCbpnQM3ORSqB7l_e3wDjibbqA/formResponse";
+    // ── SEND TO GOOGLE SHEETS ──
+    // Using URL-encoded fetch with no-cors — most compatible method
+    const FORM_ID = "1FAIpQLSfOo-oK3lAXlTXxNn0afqDKWCbpnQM3ORSqB7l_e3wDjibbqA";
+    const FORM_ACTION = `https://docs.google.com/forms/d/e/${FORM_ID}/formResponse`;
 
-    // Build form and submit via hidden iframe — bypasses CORS completely
-    const iframe = document.createElement('iframe');
-    iframe.name = 'hidden-form-iframe';
-    iframe.style.display = 'none';
-    document.body.appendChild(iframe);
-
-    const form = document.createElement('form');
-    form.method = 'POST';
-    form.action = FORM_ACTION;
-    form.target = 'hidden-form-iframe';
-
-    const fields = {
+    const params = new URLSearchParams({
       'entry.1078651477': safeName,
       'entry.1860280611': safeAge,
       'entry.1274530838': safePhone,
-      'entry.627487229':  safeEmail,
+      'entry.627487229':  safeEmail || '',
       'entry.1733530980': safeConcern,
-      'entry.1399362158': safeHistory,
-      'entry.1731921150': safeMeds,
-      'entry.2077947419': safeSource
-    };
-
-    Object.entries(fields).forEach(([name, value]) => {
-      const input = document.createElement('input');
-      input.type = 'hidden';
-      input.name = name;
-      input.value = value;
-      form.appendChild(input);
+      'entry.1399362158': safeHistory || '',
+      'entry.1731921150': safeMeds || '',
+      'entry.2077947419': safeSource || '',
+      'fvv': '1',
+      'partialResponse': '[null,null,""]',
+      'pageHistory': '0',
+      'fbzx': '-1234567890'
     });
 
-    document.body.appendChild(form);
-    form.submit();
+    // Method 1: fetch no-cors
+    fetch(FORM_ACTION, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: params.toString()
+    }).catch(() => {});
 
-    // Clean up after submission
-    setTimeout(() => {
-      document.body.removeChild(form);
-      document.body.removeChild(iframe);
-    }, 3000);
+    // Method 2: Image pixel fallback (works even if fetch blocked)
+    const img = new Image();
+    img.src = FORM_ACTION + '?' + params.toString();
+
+
 
     // ── UPDATE WHATSAPP LINK with patient details ──
     const waMsg = encodeURIComponent(
