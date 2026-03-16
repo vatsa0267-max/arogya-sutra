@@ -845,6 +845,18 @@
           </button>
         </div>
 
+        <!-- UPI QR CODE -->
+        <div style="background:#fff;border-radius:16px;padding:20px;margin-bottom:12px;text-align:center;">
+          <div style="font-size:0.75rem;color:#666;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;font-weight:700;">📷 Scan to Pay ₹500</div>
+          <img
+            src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=upi://pay?pa=7758026980@ybl%26pn=ArogyaSutra%26am=500%26cu=INR%26tn=NatureCureConsultation"
+            alt="UPI QR Code - Scan to pay ₹500"
+            style="width:180px;height:180px;border-radius:8px;display:block;margin:0 auto 12px;"
+          />
+          <div style="font-size:0.8rem;color:#1a3a1f;font-weight:700;">7758026980@ybl</div>
+          <div style="font-size:0.72rem;color:#888;margin-top:4px;">Open any UPI app → Scan QR → Pay ₹500</div>
+        </div>
+
         <!-- UPI DEEP LINK -->
         <a href="upi://pay?pa=7758026980@ybl&pn=ArogyaSutra&cu=INR&am=500&tn=NatureCureConsultation"
           onclick="showStep3()"
