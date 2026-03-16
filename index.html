@@ -717,83 +717,75 @@
   </div>
 </section>
 
+
 <!-- BOOKING -->
 <section id="booking">
   <div class="container">
     <div class="section-label">Get Started</div>
     <h2 class="section-title">Book Your Consultation</h2>
-    <p class="section-sub">Fill in your details and we'll confirm your appointment within 24 hours.</p>
-    <div class="booking-wrapper">
-      <div class="booking-info">
-        <h3>How It Works</h3>
-        <ul class="booking-steps">
-          <li>
-            <div class="step-num">1</div>
-            <div>Fill the booking form with your name, contact, preferred date and your health concern.</div>
-          </li>
-          <li>
-            <div class="step-num">2</div>
-            <div>We will call you on your number to confirm the appointment slot within 24 hours.</div>
-          </li>
-          <li>
-            <div class="step-num">3</div>
-            <div>Pay the consultation fee via UPI before your appointment to secure your slot.</div>
-          </li>
-          <li>
-            <div class="step-num">4</div>
-            <div>Attend your consultation with Dr. Vishaka and begin your natural healing journey!</div>
-          </li>
-        </ul>
+    <p class="section-sub">Choose how you'd like to book — instant calendar booking or a quick WhatsApp message.</p>
+
+    <!-- TWO BOOKING OPTION CARDS -->
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px;max-width:800px;margin:0 auto 48px;">
+
+      <!-- CAL.COM CARD -->
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:36px 28px;text-align:center;">
+        <div style="font-size:2.8rem;margin-bottom:16px;">📅</div>
+        <h3 style="font-family:'Playfair Display',serif;color:var(--gold);font-size:1.3rem;margin-bottom:12px;">Book via Cal.com</h3>
+        <p style="color:rgba(255,255,255,0.75);font-size:0.92rem;line-height:1.65;margin-bottom:24px;">
+          Pick a date & time that works for you. Get instant confirmation with a calendar invite sent to your email.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="https://cal.com/arogyasutra/nature-cure-consultation" target="_blank"
+            style="background:var(--gold);color:var(--green-deep);padding:14px 28px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.95rem;transition:all 0.3s;display:inline-block;">
+            📅 Book Appointment
+          </a>
+          <span style="color:rgba(255,255,255,0.4);font-size:0.78rem;">Opens booking calendar • Free • Instant confirmation</span>
+        </div>
       </div>
-      <div class="booking-form">
-        <h3>Request Appointment</h3>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Full Name *</label>
-            <input type="text" id="f-name" placeholder="Your name" />
-          </div>
-          <div class="form-group">
-            <label>Age</label>
-            <input type="number" id="f-age" placeholder="Age" min="1" max="120" />
-          </div>
+
+      <!-- WHATSAPP CARD -->
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:36px 28px;text-align:center;">
+        <div style="font-size:2.8rem;margin-bottom:16px;">💬</div>
+        <h3 style="font-family:'Playfair Display',serif;color:var(--gold);font-size:1.3rem;margin-bottom:12px;">Book via WhatsApp</h3>
+        <p style="color:rgba(255,255,255,0.75);font-size:0.92rem;line-height:1.65;margin-bottom:24px;">
+          Prefer to chat? Message Dr. Vishaka directly on WhatsApp. Share your concern and preferred time — we'll confirm your slot.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:12px;">
+          <a href="https://wa.me/917758026980?text=Hello%20Dr.%20Vishaka!%20%F0%9F%99%8F%20I%20would%20like%20to%20book%20a%20consultation%20at%20Arogya%20Sutra.%20Please%20let%20me%20know%20the%20available%20slots.%20I%20saw%20your%20booking%20link%3A%20https%3A%2F%2Fcal.com%2Farogyasutra%2Fnature-cure-consultation"
+            target="_blank"
+            style="background:#25D366;color:#fff;padding:14px 28px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.95rem;transition:all 0.3s;display:inline-block;">
+            💬 Chat on WhatsApp
+          </a>
+          <span style="color:rgba(255,255,255,0.4);font-size:0.78rem;">Opens WhatsApp • Direct with Dr. Vishaka • 7758026980</span>
         </div>
-        <div class="form-group">
-          <label>Phone Number *</label>
-          <input type="tel" id="f-phone" placeholder="10-digit mobile number" maxlength="10" />
+      </div>
+
+    </div>
+
+    <!-- HOW IT WORKS STEPS -->
+    <div style="max-width:700px;margin:0 auto;">
+      <h3 style="font-family:'Playfair Display',serif;color:var(--gold);font-size:1.3rem;text-align:center;margin-bottom:28px;">How It Works</h3>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:20px;text-align:center;">
+        <div>
+          <div style="width:48px;height:48px;background:var(--gold);color:var(--green-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;margin:0 auto 12px;">1</div>
+          <p style="color:rgba(255,255,255,0.8);font-size:0.88rem;line-height:1.6;">Book via Cal.com or WhatsApp</p>
         </div>
-        <div class="form-group">
-          <label>Email (optional)</label>
-          <input type="email" id="f-email" placeholder="your@email.com" />
+        <div>
+          <div style="width:48px;height:48px;background:var(--gold);color:var(--green-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;margin:0 auto 12px;">2</div>
+          <p style="color:rgba(255,255,255,0.8);font-size:0.88rem;line-height:1.6;">Get confirmation from Dr. Vishaka</p>
         </div>
-        <div class="form-group">
-          <label>Preferred Date</label>
-          <input type="date" id="f-date" />
+        <div>
+          <div style="width:48px;height:48px;background:var(--gold);color:var(--green-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;margin:0 auto 12px;">3</div>
+          <p style="color:rgba(255,255,255,0.8);font-size:0.88rem;line-height:1.6;">Pay ₹500 via UPI to secure slot</p>
         </div>
-        <div class="form-group">
-          <label>Service Interested In</label>
-          <select id="f-service">
-            <option value="">Select a service</option>
-            <option>Yoga Therapy</option>
-            <option>Nature Cure Treatments</option>
-            <option>Diet & Lifestyle Counseling</option>
-            <option>Detox Program</option>
-            <option>Stress Management & Meditation</option>
-            <option>Weight Management / Chronic Disease</option>
-            <option>General Consultation</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Brief Health Concern</label>
-          <textarea id="f-concern" placeholder="Describe your main health concern briefly..."></textarea>
-        </div>
-        <button class="btn-submit" onclick="submitBooking()">Request Appointment →</button>
-        <p class="form-note">🔒 Your information is kept strictly confidential and never shared.</p>
-        <div class="success-msg" id="success-msg">
-          <div class="tick">✅</div>
-          <p><strong>Booking request received!</strong><br/>Dr. Vishaka's team will call you within 24 hours to confirm your slot. Thank you for choosing Arogya Sutra.</p>
+        <div>
+          <div style="width:48px;height:48px;background:var(--gold);color:var(--green-deep);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1.1rem;margin:0 auto 12px;">4</div>
+          <p style="color:rgba(255,255,255,0.8);font-size:0.88rem;line-height:1.6;">Attend & begin your healing journey!</p>
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
@@ -802,18 +794,78 @@
   <div class="container">
     <div class="section-label">Secure Payment</div>
     <h2 class="section-title">Pay Your Consultation Fee</h2>
-    <p class="section-sub">Pay securely via UPI after your appointment is confirmed by our team.</p>
+    <p class="section-sub">After booking your slot on Cal.com, complete payment here to confirm your appointment.</p>
+
     <div class="payment-box">
-      <div class="upi-icon">💳</div>
-      <h3>UPI Payment</h3>
-      <p>Once your appointment is confirmed, use the button below to pay the consultation fee securely via any UPI app — PhonePe, GPay, Paytm, or your bank app.</p>
-      <div class="fee-tag">₹ Consultation Fee</div>
-      <br/>
-      <!-- Replace YOUR-UPI-ID with your actual UPI ID e.g. vishaka@upi -->
-      <a href="upi://pay?pa=YOUR-UPI-ID&pn=ArogyaSutra&cu=INR&am=500&tn=ConsultationFee" class="pay-btn">
-        <span>Pay via UPI</span> <span>→</span>
-      </a>
-      <p class="pay-note">Works on mobile with any UPI app. Share your UTR / transaction ID with us on WhatsApp after payment.<br/>📱 WhatsApp: <a href="https://wa.me/917758026980" style="color:var(--green-light)">7758026980</a></p>
+
+      <!-- STEP INDICATOR -->
+      <div style="display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:32px;flex-wrap:wrap;">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+          <div style="width:40px;height:40px;background:var(--green-deep);border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:700;">✓</div>
+          <span style="font-size:0.72rem;color:var(--text-mid);text-align:center;">Book slot<br/>on Cal.com</span>
+        </div>
+        <div style="width:40px;height:2px;background:var(--gold);margin-bottom:20px;"></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+          <div style="width:40px;height:40px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green-deep);font-weight:700;font-size:1rem;">2</div>
+          <span style="font-size:0.72rem;color:var(--text-mid);text-align:center;">Pay ₹500<br/>via UPI</span>
+        </div>
+        <div style="width:40px;height:2px;background:#ddd;margin-bottom:20px;"></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+          <div style="width:40px;height:40px;background:#eee;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#999;font-weight:700;font-size:1rem;">3</div>
+          <span style="font-size:0.72rem;color:#999;text-align:center;">Share UTR<br/>on WhatsApp</span>
+        </div>
+        <div style="width:40px;height:2px;background:#ddd;margin-bottom:20px;"></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+          <div style="width:40px;height:40px;background:#eee;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#999;font-weight:700;font-size:1rem;">4</div>
+          <span style="font-size:0.72rem;color:#999;text-align:center;">Appointment<br/>confirmed!</span>
+        </div>
+      </div>
+
+      <!-- UPI PAYMENT BOX -->
+      <div style="background:var(--green-deep);border-radius:16px;padding:28px;margin-bottom:20px;">
+        <div style="font-size:2.5rem;margin-bottom:10px;">💳</div>
+        <div style="color:var(--gold);font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;margin-bottom:4px;">₹500</div>
+        <div style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin-bottom:20px;">Nature Cure Consultation Fee</div>
+
+        <!-- UPI ID display -->
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:12px 16px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+          <div>
+            <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px;">UPI ID</div>
+            <div style="color:#fff;font-weight:700;font-size:1rem;letter-spacing:0.5px;">*****@ybl</div>
+          </div>
+          <button onclick="copyUPI()" id="copy-btn"
+            style="background:var(--gold);color:var(--green-deep);border:none;padding:8px 16px;border-radius:20px;font-weight:700;font-size:0.8rem;cursor:pointer;">
+            📋 Copy
+          </button>
+        </div>
+
+        <!-- PAY BUTTONS -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;">
+          <a href="upi://pay?pa=*****@ybl&pn=ArogyaSutra&cu=INR&am=500&tn=NatureCureConsultation"
+            style="background:#fff;color:var(--green-deep);padding:12px 8px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.82rem;text-align:center;display:block;">
+            📱 Pay via UPI App
+          </a>
+          <a href="upi://pay?pa=*****@ybl&pn=ArogyaSutra&cu=INR&am=500&tn=NatureCureConsultation"
+            style="background:#00BA4A;color:#fff;padding:12px 8px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.82rem;text-align:center;display:block;">
+            💚 PhonePe / GPay
+          </a>
+        </div>
+        <p style="color:rgba(255,255,255,0.45);font-size:0.75rem;">Opens your UPI app automatically on mobile</p>
+      </div>
+
+      <!-- AFTER PAYMENT - SEND UTR -->
+      <div style="background:#f0faf4;border:1px solid #c3e6cb;border-radius:14px;padding:20px 24px;text-align:left;">
+        <div style="font-weight:700;color:var(--green-deep);margin-bottom:8px;font-size:0.95rem;">✅ After paying — send your UTR to confirm</div>
+        <p style="color:var(--text-mid);font-size:0.88rem;line-height:1.6;margin-bottom:14px;">
+          Once payment is done, your UPI app will show a <strong>UTR / Transaction ID</strong> (12-digit number). Send it to us on WhatsApp to confirm your appointment.
+        </p>
+        <a href="https://wa.me/917758026980?text=Hello%20Dr.%20Vishaka!%20I%20have%20completed%20the%20payment%20of%20%E2%82%B9500%20for%20my%20Nature%20Cure%20Consultation.%20My%20UTR%20number%20is%3A%20%5BPaste%20UTR%20here%5D.%20Please%20confirm%20my%20appointment."
+          target="_blank"
+          style="background:#25D366;color:#fff;padding:12px 24px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.88rem;display:inline-flex;align-items:center;gap:8px;">
+          💬 Send UTR on WhatsApp
+        </a>
+      </div>
+
     </div>
   </div>
 </section>
@@ -906,7 +958,70 @@
 </footer>
 
 <!-- FLOATING CTA -->
-<a href="#booking" class="float-cta">📅 Book Now</a>
+<!-- WHATSAPP CHAT BUBBLE -->
+<div id="wa-bubble" style="position:fixed;bottom:24px;right:24px;z-index:999;display:flex;flex-direction:column;align-items:flex-end;gap:12px;">
+
+  <!-- POPUP CARD -->
+  <div id="wa-popup" style="background:#fff;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.15);width:290px;overflow:hidden;display:none;">
+    <!-- Header -->
+    <div style="background:#1a3a1f;padding:14px 18px;display:flex;align-items:center;gap:12px;">
+      <img src="logo.png" style="width:40px;height:40px;border-radius:50%;object-fit:cover;border:2px solid #c9a84c;" />
+      <div>
+        <div style="color:#fff;font-weight:700;font-size:0.9rem;">Dr. Vishaka</div>
+        <div style="color:#a8d5a2;font-size:0.75rem;">🟢 Usually replies instantly</div>
+      </div>
+      <span onclick="document.getElementById('wa-popup').style.display='none'" style="margin-left:auto;color:rgba(255,255,255,0.6);cursor:pointer;font-size:1.4rem;line-height:1;">×</span>
+    </div>
+    <!-- Chat bubble -->
+    <div style="padding:16px;background:#f0f4f0;">
+      <div style="background:#fff;border-radius:0 12px 12px 12px;padding:12px 14px;box-shadow:0 2px 8px rgba(0,0,0,0.08);font-size:0.88rem;line-height:1.6;color:#1a3a1f;">
+        👋 Hi! I'm Dr. Vishaka from Arogya Sutra.<br/><br/>
+        Would you like to book a <strong>Nature Cure Consultation</strong>?<br/><br/>
+        Click below to pick a time that suits you! 🌿
+      </div>
+      <div style="font-size:0.7rem;color:#999;margin-top:6px;padding-left:4px;">Just now</div>
+    </div>
+    <!-- Buttons -->
+    <div style="padding:14px 16px;display:flex;flex-direction:column;gap:8px;background:#fff;">
+      <a href="https://cal.com/arogyasutra/nature-cure-consultation" target="_blank"
+        style="background:#1a3a1f;color:#c9a84c;padding:11px 16px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.85rem;text-align:center;display:block;">
+        📅 Book via Cal.com
+      </a>
+      <a href="https://wa.me/917758026980?text=Hello%20Dr.%20Vishaka!%20%F0%9F%99%8F%20I%20want%20to%20book%20a%20Nature%20Cure%20Consultation.%20My%20booking%20link%3A%20https%3A%2F%2Fcal.com%2Farogyasutra%2Fnature-cure-consultation"
+        target="_blank"
+        style="background:#25D366;color:#fff;padding:11px 16px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.85rem;text-align:center;display:block;">
+        💬 Chat on WhatsApp
+      </a>
+      <p style="font-size:0.72rem;color:#aaa;text-align:center;margin:4px 0 0;">🔒 Your details are always private</p>
+    </div>
+  </div>
+
+  <!-- BUBBLE BUTTON -->
+  <button onclick="document.getElementById('wa-popup').style.display=document.getElementById('wa-popup').style.display==='block'?'none':'block'"
+    style="width:60px;height:60px;background:#25D366;border:none;border-radius:50%;box-shadow:0 4px 20px rgba(37,211,102,0.5);cursor:pointer;font-size:1.6rem;display:flex;align-items:center;justify-content:center;animation:pulse 2.5s infinite;">
+    💬
+  </button>
+</div>
+
+<script>
+  // Auto-open popup after 6 seconds
+  setTimeout(() => {
+    document.getElementById('wa-popup').style.display = 'block';
+  }, 6000);
+
+  // Copy UPI ID
+  function copyUPI() {
+    navigator.clipboard.writeText('*****@ybl').then(() => {
+      const btn = document.getElementById('copy-btn');
+      btn.textContent = '✓ Copied!';
+      btn.style.background = '#a8d5a2';
+      setTimeout(() => {
+        btn.textContent = '📋 Copy';
+        btn.style.background = 'var(--gold)';
+      }, 2000);
+    });
+  }
+</script>
 
 <script>
   // Set min date on date picker to today
