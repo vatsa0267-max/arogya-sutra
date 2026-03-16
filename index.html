@@ -725,16 +725,21 @@
     <h2 class="section-title">Book Your Consultation</h2>
     <p class="section-sub">Fill your details first — then pick your slot on Cal.com.</p>
 
-    <!-- STEP INDICATORS -->
-    <div style="display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:40px;">
+    <!-- STEP INDICATORS — 3 steps -->
+    <div style="display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:40px;flex-wrap:wrap;">
       <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
         <div id="s1" style="width:44px;height:44px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green-deep);font-weight:700;">1</div>
         <span style="font-size:0.72rem;color:var(--gold);font-weight:700;">Your Details</span>
       </div>
-      <div style="width:60px;height:2px;background:rgba(255,255,255,0.2);margin-bottom:20px;"></div>
+      <div style="width:50px;height:2px;background:rgba(255,255,255,0.2);margin-bottom:20px;"></div>
       <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
         <div id="s2" style="width:44px;height:44px;background:rgba(255,255,255,0.1);border:2px solid rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);font-weight:700;">2</div>
-        <span style="font-size:0.72rem;color:rgba(255,255,255,0.4);" id="s2-label">Book Slot</span>
+        <span style="font-size:0.72rem;color:rgba(255,255,255,0.4);" id="s2-label">Pay ₹500</span>
+      </div>
+      <div style="width:50px;height:2px;background:rgba(255,255,255,0.2);margin-bottom:20px;"></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
+        <div id="s3" style="width:44px;height:44px;background:rgba(255,255,255,0.1);border:2px solid rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);font-weight:700;">3</div>
+        <span style="font-size:0.72rem;color:rgba(255,255,255,0.4);" id="s3-label">Book Slot</span>
       </div>
     </div>
 
@@ -802,7 +807,7 @@
 
         <button onclick="submitPatientForm()"
           style="width:100%;background:var(--gold);color:var(--green-deep);border:none;padding:15px;border-radius:50px;font-family:'Lato',sans-serif;font-weight:700;font-size:1rem;cursor:pointer;transition:all 0.3s;">
-          Save Details & Pick Appointment Slot →
+          Save Details & Proceed to Payment →
         </button>
         <p style="font-size:0.75rem;color:rgba(255,255,255,0.35);text-align:center;margin-top:10px;">🔒 Your information is never shared with anyone</p>
 
@@ -811,18 +816,71 @@
       </div>
     </div>
 
-    <!-- STEP 2 — BOOKING OPTIONS (shown after form submit) -->
-    <div id="form-step2" style="display:none;max-width:700px;margin:0 auto;">
+    <!-- STEP 2 — PAY FIRST -->
+    <div id="form-step2" style="display:none;max-width:600px;margin:0 auto;">
 
       <!-- SUCCESS BANNER -->
       <div style="background:rgba(168,200,74,0.15);border:1px solid rgba(168,200,74,0.4);border-radius:14px;padding:18px 24px;text-align:center;margin-bottom:28px;">
         <div style="font-size:1.8rem;margin-bottom:6px;">✅</div>
-        <div style="color:#fff;font-weight:700;font-size:1rem;">Details saved to Dr. Vishaka's records!</div>
-        <div style="color:rgba(255,255,255,0.6);font-size:0.85rem;margin-top:4px;">Now pick your appointment slot below</div>
+        <div style="color:#fff;font-weight:700;font-size:1rem;">Details saved! Now complete payment to secure your slot.</div>
+        <div style="color:rgba(255,255,255,0.6);font-size:0.85rem;margin-top:4px;">Your appointment will be confirmed after payment.</div>
       </div>
 
-      <!-- TWO BOOKING CARDS -->
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;">
+      <!-- PAYMENT CARD -->
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:32px 28px;text-align:center;margin-bottom:20px;">
+        <div style="font-size:2.5rem;margin-bottom:10px;">💳</div>
+        <div style="color:var(--gold);font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;margin-bottom:4px;">₹500</div>
+        <div style="color:rgba(255,255,255,0.6);font-size:0.85rem;margin-bottom:24px;">Nature Cure Consultation Fee</div>
+
+        <!-- UPI ID display -->
+        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:12px 16px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+          <div style="text-align:left;">
+            <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px;">UPI ID</div>
+            <div style="color:#fff;font-weight:700;font-size:1rem;">7758026980@ybl</div>
+          </div>
+          <button onclick="copyUPI()" id="copy-btn"
+            style="background:var(--gold);color:var(--green-deep);border:none;padding:8px 16px;border-radius:20px;font-weight:700;font-size:0.8rem;cursor:pointer;">
+            📋 Copy
+          </button>
+        </div>
+
+        <!-- RAZORPAY — PRIMARY -->
+        <a href="https://rzp.io/rzp/OOQvjsi" target="_blank" onclick="showStep3()"
+          style="display:block;background:var(--gold);color:var(--green-deep);padding:15px;border-radius:50px;text-decoration:none;font-weight:700;font-size:1rem;text-align:center;margin-bottom:8px;box-shadow:0 4px 16px rgba(201,168,76,0.4);">
+          💳 Pay ₹500 — Cards / NetBanking / UPI
+        </a>
+        <p style="color:rgba(255,255,255,0.4);font-size:0.72rem;margin-bottom:14px;">Works on mobile & desktop • All payment methods</p>
+
+        <!-- DIVIDER -->
+        <div style="display:flex;align-items:center;gap:10px;margin:12px 0;">
+          <div style="flex:1;height:1px;background:rgba(255,255,255,0.15);"></div>
+          <span style="color:rgba(255,255,255,0.35);font-size:0.75rem;">or</span>
+          <div style="flex:1;height:1px;background:rgba(255,255,255,0.15);"></div>
+        </div>
+
+        <!-- UPI DEEP LINK — SECONDARY -->
+        <a href="upi://pay?pa=7758026980@ybl&pn=ArogyaSutra&cu=INR&am=500&tn=NatureCureConsultation"
+          onclick="showStep3()"
+          style="display:block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:13px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.9rem;text-align:center;">
+          📱 Pay via UPI App (Mobile only)
+        </a>
+        <p style="color:rgba(255,255,255,0.3);font-size:0.72rem;margin-top:6px;">Opens GPay / PhonePe / Paytm</p>
+      </div>
+
+    </div>
+
+    <!-- STEP 3 — BOOK SLOT (shown after payment clicked) -->
+    <div id="form-step3" style="display:none;max-width:700px;margin:0 auto;">
+
+      <!-- PAYMENT DONE BANNER -->
+      <div style="background:rgba(168,200,74,0.15);border:1px solid rgba(168,200,74,0.4);border-radius:14px;padding:18px 24px;text-align:center;margin-bottom:28px;">
+        <div style="font-size:1.8rem;margin-bottom:6px;">💚</div>
+        <div style="color:#fff;font-weight:700;font-size:1rem;">Payment initiated! Now book your appointment slot.</div>
+        <div style="color:rgba(255,255,255,0.6);font-size:0.85rem;margin-top:4px;">After booking, send your UTR number on WhatsApp to confirm.</div>
+      </div>
+
+      <!-- BOOKING CARDS -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-bottom:24px;">
         <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:32px 24px;text-align:center;">
           <div style="font-size:2.5rem;margin-bottom:14px;">📅</div>
           <h3 style="font-family:'Playfair Display',serif;color:var(--gold);font-size:1.2rem;margin-bottom:10px;">Book via Cal.com</h3>
@@ -834,13 +892,24 @@
         </div>
         <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:32px 24px;text-align:center;">
           <div style="font-size:2.5rem;margin-bottom:14px;">💬</div>
-          <h3 style="font-family:'Playfair Display',serif;color:var(--gold);font-size:1.2rem;margin-bottom:10px;">Book via WhatsApp</h3>
+          <h3 style="font-family:'Playfair Dixon',serif;color:var(--gold);font-size:1.2rem;margin-bottom:10px;">Book via WhatsApp</h3>
           <p style="color:rgba(255,255,255,0.7);font-size:0.88rem;line-height:1.6;margin-bottom:20px;">Chat directly with Dr. Vishaka to pick your slot.</p>
           <a id="wa-book-link" href="https://wa.me/917758026980" target="_blank"
             style="background:#25D366;color:#fff;padding:13px 28px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.9rem;display:inline-block;">
             💬 Chat on WhatsApp
           </a>
         </div>
+      </div>
+
+      <!-- SEND UTR -->
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:14px;padding:20px 24px;text-align:center;">
+        <div style="color:#fff;font-weight:700;margin-bottom:8px;">📋 Last step — send your UTR number</div>
+        <p style="color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.6;margin-bottom:14px;">After paying, your UPI app shows a UTR / Transaction ID. Send it to confirm your appointment.</p>
+        <a href="https://wa.me/917758026980?text=Hello%20Dr.%20Vishaka!%20I%20have%20paid%20%E2%82%B9500%20for%20my%20consultation.%20My%20UTR%20is%3A%20%5BPaste%20here%5D"
+          target="_blank"
+          style="background:#25D366;color:#fff;padding:12px 24px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.88rem;display:inline-block;">
+          💬 Send UTR on WhatsApp
+        </a>
       </div>
 
     </div>
