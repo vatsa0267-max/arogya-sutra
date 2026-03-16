@@ -813,65 +813,88 @@
     <div id="form-step2" style="display:none;max-width:520px;margin:0 auto;">
       <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:36px 32px;text-align:center;">
         <h3 style="font-family:'Playfair Display',serif;color:var(--gold);font-size:1.3rem;margin-bottom:6px;">Step 2 — Pay ₹500</h3>
-        <p style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin-bottom:28px;">Secure your consultation slot with payment</p>
-
         <div style="color:var(--gold);font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;margin-bottom:4px;">₹500</div>
-        <div style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin-bottom:28px;">Nature Cure Consultation Fee</div>
+        <div style="color:rgba(255,255,255,0.5);font-size:0.82rem;margin-bottom:24px;">Nature Cure Consultation Fee</div>
 
-        <!-- RAZORPAY — PRIMARY RECOMMENDED -->
-        <a href="https://rzp.io/rzp/OOQvjsi" target="_blank" onclick="showStep3()"
-          style="display:block;background:var(--gold);color:var(--green-deep);padding:16px;border-radius:50px;text-decoration:none;font-weight:700;font-size:1rem;margin-bottom:8px;box-shadow:0 4px 20px rgba(201,168,76,0.4);">
-          💳 Pay via Razorpay
-        </a>
-        <div style="background:rgba(201,168,76,0.1);border-radius:10px;padding:8px 14px;margin-bottom:20px;">
-          <p style="color:rgba(255,255,255,0.6);font-size:0.78rem;">✅ Cards &nbsp;•&nbsp; NetBanking &nbsp;•&nbsp; UPI &nbsp;•&nbsp; Wallets<br/>Works on mobile & desktop &nbsp;•&nbsp; Auto confirmation</p>
-        </div>
-
-        <!-- DIVIDER -->
-        <div style="display:flex;align-items:center;gap:10px;margin:16px 0;">
-          <div style="flex:1;height:1px;background:rgba(255,255,255,0.1);"></div>
-          <span style="color:rgba(255,255,255,0.3);font-size:0.75rem;">or pay directly via UPI</span>
-          <div style="flex:1;height:1px;background:rgba(255,255,255,0.1);"></div>
-        </div>
-
-        <!-- UPI ID COPY -->
-        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;">
-          <div style="text-align:left;">
-            <div style="color:rgba(255,255,255,0.4);font-size:0.68rem;letter-spacing:1px;text-transform:uppercase;">UPI ID</div>
-            <div style="color:#fff;font-weight:700;">7758026980@ybl</div>
-          </div>
-          <button onclick="copyUPI()" id="copy-btn"
-            style="background:var(--gold);color:var(--green-deep);border:none;padding:7px 14px;border-radius:20px;font-weight:700;font-size:0.78rem;cursor:pointer;">
-            📋 Copy
+        <!-- OPTION A: RAZORPAY -->
+        <div style="background:rgba(201,168,76,0.08);border:1px solid rgba(201,168,76,0.25);border-radius:14px;padding:20px;margin-bottom:16px;text-align:center;">
+          <div style="color:var(--gold);font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:12px;">✨ Option A — Recommended</div>
+          <a href="https://rzp.io/rzp/OOQvjsi" target="_blank"
+            style="display:block;background:var(--gold);color:var(--green-deep);padding:14px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.95rem;margin-bottom:8px;">
+            💳 Pay via Razorpay
+          </a>
+          <p style="color:rgba(255,255,255,0.5);font-size:0.75rem;margin-bottom:14px;">Cards • NetBanking • UPI • Auto receipt emailed</p>
+          <button onclick="showStep3()"
+            style="width:100%;background:#8fb84a;color:#fff;border:none;padding:12px;border-radius:50px;font-family:'Lato',sans-serif;font-weight:700;font-size:0.88rem;cursor:pointer;">
+            ✅ Paid via Razorpay → Book My Slot
           </button>
         </div>
 
-        <!-- UPI QR CODE — generated in browser, no external service -->
-        <div style="background:#fff;border-radius:16px;padding:20px;margin-bottom:12px;text-align:center;">
-          <div style="font-size:0.75rem;color:#666;letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;font-weight:700;">📷 Scan to Pay ₹500</div>
-          <div id="upi-qr" style="display:inline-block;border-radius:8px;overflow:hidden;margin:0 auto 12px;"></div>
-          <div style="font-size:0.8rem;color:#1a3a1f;font-weight:700;">7758026980@ybl</div>
-          <div style="font-size:0.72rem;color:#888;margin-top:4px;">Open any UPI app → Scan QR → Pay ₹500</div>
+        <div style="display:flex;align-items:center;gap:10px;margin:8px 0 16px;">
+          <div style="flex:1;height:1px;background:rgba(255,255,255,0.1);"></div>
+          <span style="color:rgba(255,255,255,0.3);font-size:0.75rem;">or</span>
+          <div style="flex:1;height:1px;background:rgba(255,255,255,0.1);"></div>
         </div>
 
-        <!-- UPI DEEP LINK -->
-        <a href="upi://pay?pa=7758026980@ybl&pn=ArogyaSutra&cu=INR&am=500&tn=NatureCureConsultation"
-          onclick="showStep3()"
-          style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:#fff;padding:13px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.88rem;margin-bottom:6px;">
-          📱 Open UPI App (Mobile only)
-        </a>
-        <p style="color:rgba(255,255,255,0.25);font-size:0.72rem;margin-bottom:20px;">Opens GPay / PhonePe / Paytm on your phone</p>
+        <!-- OPTION B: QR / UPI -->
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:20px;text-align:center;">
+          <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:12px;">Option B — QR Code / UPI</div>
 
-        <!-- I HAVE PAID BUTTON — for QR/UPI payments -->
-        <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:20px;margin-top:4px;">
-          <p style="color:rgba(255,255,255,0.5);font-size:0.82rem;margin-bottom:12px;">✅ Paid via QR or UPI app? Send screenshot to confirm:</p>
-          <a href="https://wa.me/917758026980?text=Hello%20Dr.%20Vishaka!%20%F0%9F%99%8F%20I%20have%20completed%20my%20payment%20of%20%E2%82%B9500%20for%20the%20Nature%20Cure%20Consultation.%20Please%20find%20my%20payment%20screenshot%20attached.%20Kindly%20confirm%20my%20appointment.%20%F0%9F%8C%BF"
-            target="_blank"
-            onclick="showStep3()"
-            style="display:block;background:#25D366;color:#fff;padding:14px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.95rem;text-align:center;box-shadow:0 4px 16px rgba(37,211,102,0.3);margin-bottom:8px;">
-            📸 Send Payment Screenshot on WhatsApp
+          <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:10px 14px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;">
+            <div style="text-align:left;">
+              <div style="color:rgba(255,255,255,0.4);font-size:0.65rem;letter-spacing:1px;text-transform:uppercase;">UPI ID</div>
+              <div style="color:#fff;font-weight:700;">7758026980@ybl</div>
+            </div>
+            <button onclick="copyUPI()" id="copy-btn"
+              style="background:var(--gold);color:var(--green-deep);border:none;padding:6px 12px;border-radius:20px;font-weight:700;font-size:0.75rem;cursor:pointer;">
+              📋 Copy
+            </button>
+          </div>
+
+          <div style="background:#fff;border-radius:12px;padding:16px;margin-bottom:12px;">
+            <div style="font-size:0.7rem;color:#555;letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:10px;">📷 Scan QR to Pay</div>
+            <div id="upi-qr" style="display:inline-block;border-radius:6px;overflow:hidden;margin:0 auto 8px;"></div>
+            <div style="font-size:0.75rem;color:#1a3a1f;font-weight:700;">7758026980@ybl • ₹500</div>
+          </div>
+
+          <a href="upi://pay?pa=7758026980@ybl&pn=ArogyaSutra&cu=INR&am=500&tn=NatureCureConsultation"
+            style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:#fff;padding:12px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.85rem;margin-bottom:16px;">
+            📱 Open UPI App (Mobile only)
           </a>
-          <p style="color:rgba(255,255,255,0.3);font-size:0.72rem;text-align:center;">Opens WhatsApp → send your payment screenshot → Dr. Vishaka confirms</p>
+
+          <!-- AFTER QR PAYMENT — CLEAR STEPS -->
+          <div style="background:rgba(37,211,102,0.08);border:1px solid rgba(37,211,102,0.2);border-radius:12px;padding:16px;margin-bottom:12px;text-align:left;">
+            <div style="color:#fff;font-weight:700;font-size:0.85rem;margin-bottom:10px;">After paying via QR / UPI:</div>
+            <div style="display:flex;flex-direction:column;gap:8px;">
+              <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.75);font-size:0.82rem;">
+                <span style="min-width:24px;height:24px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:700;">1</span>
+                Take a screenshot of your payment confirmation
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.75);font-size:0.82rem;">
+                <span style="min-width:24px;height:24px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:700;">2</span>
+                Click button below → WhatsApp opens with message
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.75);font-size:0.82rem;">
+                <span style="min-width:24px;height:24px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:700;">3</span>
+                Attach screenshot & send to Dr. Vishaka
+              </div>
+              <div style="display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.75);font-size:0.82rem;">
+                <span style="min-width:24px;height:24px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-weight:700;">4</span>
+                Return here and click "Book My Slot" below
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/917758026980?text=Hello%20Dr.%20Vishaka!%20%F0%9F%99%8F%20I%20have%20paid%20%E2%82%B9500%20via%20UPI%20for%20my%20Nature%20Cure%20Consultation.%20Sending%20my%20payment%20screenshot%20now.%20Please%20confirm%20my%20appointment.%20%F0%9F%8C%BF"
+            target="_blank"
+            style="display:block;background:#25D366;color:#fff;padding:13px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.88rem;text-align:center;margin-bottom:10px;">
+            📸 Send Screenshot on WhatsApp
+          </a>
+
+          <button onclick="showStep3()"
+            style="width:100%;background:#8fb84a;color:#fff;border:none;padding:13px;border-radius:50px;font-family:'Lato',sans-serif;font-weight:700;font-size:0.88rem;cursor:pointer;">
+            ✅ Screenshot Sent — Book My Slot →
+          </button>
         </div>
       </div>
     </div>
