@@ -1210,22 +1210,24 @@
     btn.textContent = 'Saving...';
 
     // ── SEND TO GOOGLE SHEETS via Apps Script ──
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbylnEzOUPMjcUzaZ92fiuO5BmzGnHjahwbiuv5Dsd7uXoNPDIsmTjkqrA5gJwhCKKf9/exec";
+    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzm4nrelPq6usYAhLpIDgWkjypOkzpA_vpwL-qlz6JsZ_ynr1EwloU7g4eJWERfPQoY/exec";
+
+    const payload = JSON.stringify({
+      name:    safeName,
+      age:     safeAge,
+      phone:   safePhone,
+      email:   safeEmail    || '',
+      concern: safeConcern,
+      history: safeHistory  || '',
+      meds:    safeMeds     || '',
+      source:  safeSource   || ''
+    });
 
     fetch(SCRIPT_URL, {
       method: 'POST',
       mode: 'no-cors',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({
-        name:    safeName,
-        age:     safeAge,
-        phone:   safePhone,
-        email:   safeEmail    || '',
-        concern: safeConcern,
-        history: safeHistory  || '',
-        meds:    safeMeds     || '',
-        source:  safeSource   || ''
-      }).toString()
+      headers: { 'Content-Type': 'text/plain' },
+      body: payload
     }).catch(() => {});
 
 
