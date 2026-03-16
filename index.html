@@ -860,7 +860,19 @@
           style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:#fff;padding:13px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.88rem;margin-bottom:6px;">
           📱 Open UPI App (Mobile only)
         </a>
-        <p style="color:rgba(255,255,255,0.25);font-size:0.72rem;">Opens GPay / PhonePe / Paytm on your phone</p>
+        <p style="color:rgba(255,255,255,0.25);font-size:0.72rem;margin-bottom:20px;">Opens GPay / PhonePe / Paytm on your phone</p>
+
+        <!-- I HAVE PAID BUTTON — for QR/UPI payments -->
+        <div style="border-top:1px solid rgba(255,255,255,0.1);padding-top:20px;margin-top:4px;">
+          <p style="color:rgba(255,255,255,0.5);font-size:0.82rem;margin-bottom:12px;">✅ Paid via QR or UPI app? Send screenshot to confirm:</p>
+          <a href="https://wa.me/917758026980?text=Hello%20Dr.%20Vishaka!%20%F0%9F%99%8F%20I%20have%20completed%20my%20payment%20of%20%E2%82%B9500%20for%20the%20Nature%20Cure%20Consultation.%20Please%20find%20my%20payment%20screenshot%20attached.%20Kindly%20confirm%20my%20appointment.%20%F0%9F%8C%BF"
+            target="_blank"
+            onclick="showStep3()"
+            style="display:block;background:#25D366;color:#fff;padding:14px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.95rem;text-align:center;box-shadow:0 4px 16px rgba(37,211,102,0.3);margin-bottom:8px;">
+            📸 Send Payment Screenshot on WhatsApp
+          </a>
+          <p style="color:rgba(255,255,255,0.3);font-size:0.72rem;text-align:center;">Opens WhatsApp → send your payment screenshot → Dr. Vishaka confirms</p>
+        </div>
       </div>
     </div>
 
@@ -1174,21 +1186,47 @@
     btn.disabled = true;
     btn.textContent = 'Saving...';
 
-    // ── SEND TO GOOGLE SHEETS via Google Form ──
+    // ── SEND TO GOOGLE SHEETS via hidden iframe (most reliable method) ──
     const FORM_ACTION = "https://docs.google.com/forms/d/e/1FAIpQLSfOo-oK3lAXlTXxNn0afqDKWCbpnQM3ORSqB7l_e3wDjibbqA/formResponse";
-    const formData = new FormData();
-    formData.append("entry.1078651477", safeName);
-    formData.append("entry.1860280611", safeAge);
-    formData.append("entry.1274530838", safePhone);
-    formData.append("entry.627487229",  safeEmail);
-    formData.append("entry.1733530980", safeConcern);
-    formData.append("entry.1399362158", safeHistory);
-    formData.append("entry.1731921150", safeMeds);
-    formData.append("entry.2077947419", safeSource);
 
-    // no-cors: Google Forms doesn't allow CORS but submission still works
-    fetch(FORM_ACTION, { method: "POST", body: formData, mode: "no-cors" })
-      .catch(() => {});
+    // Build form and submit via hidden iframe — bypasses CORS completely
+    const iframe = document.createElement('iframe');
+    iframe.name = 'hidden-form-iframe';
+    iframe.style.display = 'none';
+    document.body.appendChild(iframe);
+
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.action = FORM_ACTION;
+    form.target = 'hidden-form-iframe';
+
+    const fields = {
+      'entry.1078651477': safeName,
+      'entry.1860280611': safeAge,
+      'entry.1274530838': safePhone,
+      'entry.627487229':  safeEmail,
+      'entry.1733530980': safeConcern,
+      'entry.1399362158': safeHistory,
+      'entry.1731921150': safeMeds,
+      'entry.2077947419': safeSource
+    };
+
+    Object.entries(fields).forEach(([name, value]) => {
+      const input = document.createElement('input');
+      input.type = 'hidden';
+      input.name = name;
+      input.value = value;
+      form.appendChild(input);
+    });
+
+    document.body.appendChild(form);
+    form.submit();
+
+    // Clean up after submission
+    setTimeout(() => {
+      document.body.removeChild(form);
+      document.body.removeChild(iframe);
+    }, 3000);
 
     // ── UPDATE WHATSAPP LINK with patient details ──
     const waMsg = encodeURIComponent(
