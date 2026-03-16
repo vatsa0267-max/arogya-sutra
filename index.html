@@ -718,296 +718,191 @@
 </section>
 
 
+
+
 <!-- BOOKING -->
 <section id="booking">
   <div class="container">
     <div class="section-label">Get Started</div>
     <h2 class="section-title">Book Your Consultation</h2>
-    <p class="section-sub">Fill your details first — then pick your slot on Cal.com.</p>
+    <p class="section-sub">3 simple steps — takes less than 3 minutes.</p>
 
-    <!-- STEP INDICATORS — 3 steps -->
-    <div style="display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:40px;flex-wrap:wrap;">
-      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-        <div id="s1" style="width:44px;height:44px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green-deep);font-weight:700;">1</div>
-        <span style="font-size:0.72rem;color:var(--gold);font-weight:700;">Your Details</span>
+    <!-- STEP INDICATORS -->
+    <div style="display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:48px;flex-wrap:wrap;">
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+        <div id="s1" style="width:48px;height:48px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green-deep);font-weight:700;font-size:1.1rem;transition:all 0.4s;">1</div>
+        <span style="font-size:0.72rem;color:var(--gold);font-weight:700;letter-spacing:0.5px;">Your Details</span>
       </div>
-      <div style="width:50px;height:2px;background:rgba(255,255,255,0.2);margin-bottom:20px;"></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-        <div id="s2" style="width:44px;height:44px;background:rgba(255,255,255,0.1);border:2px solid rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);font-weight:700;">2</div>
-        <span style="font-size:0.72rem;color:rgba(255,255,255,0.4);" id="s2-label">Pay ₹500</span>
+      <div style="width:60px;height:2px;background:rgba(255,255,255,0.15);margin-bottom:22px;" id="line1"></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+        <div id="s2" style="width:48px;height:48px;background:rgba(255,255,255,0.08);border:2px solid rgba(255,255,255,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.35);font-weight:700;font-size:1.1rem;transition:all 0.4s;">2</div>
+        <span id="s2-label" style="font-size:0.72rem;color:rgba(255,255,255,0.35);letter-spacing:0.5px;">Pay ₹500</span>
       </div>
-      <div style="width:50px;height:2px;background:rgba(255,255,255,0.2);margin-bottom:20px;"></div>
-      <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-        <div id="s3" style="width:44px;height:44px;background:rgba(255,255,255,0.1);border:2px solid rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.4);font-weight:700;">3</div>
-        <span style="font-size:0.72rem;color:rgba(255,255,255,0.4);" id="s3-label">Book Slot</span>
+      <div style="width:60px;height:2px;background:rgba(255,255,255,0.15);margin-bottom:22px;" id="line2"></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:8px;">
+        <div id="s3" style="width:48px;height:48px;background:rgba(255,255,255,0.08);border:2px solid rgba(255,255,255,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.35);font-weight:700;font-size:1.1rem;transition:all 0.4s;">3</div>
+        <span id="s3-label" style="font-size:0.72rem;color:rgba(255,255,255,0.35);letter-spacing:0.5px;">Book Slot</span>
       </div>
     </div>
 
-    <!-- STEP 1 — PATIENT DETAILS FORM -->
+    <!-- ══ STEP 1 — PATIENT DETAILS ══ -->
     <div id="form-step1" style="max-width:620px;margin:0 auto;">
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:20px;padding:36px 32px;">
-        <h3 style="font-family:'Playfair Display',serif;color:var(--gold);font-size:1.3rem;margin-bottom:6px;">Step 1 — Tell Us About Yourself</h3>
-        <p style="color:rgba(255,255,255,0.55);font-size:0.85rem;margin-bottom:24px;">🔒 All details are strictly confidential and only seen by Dr. Vishaka.</p>
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:36px 32px;">
+        <h3 style="font-family:'Playfair Display',serif;color:var(--gold);font-size:1.3rem;margin-bottom:6px;">Step 1 — Your Details</h3>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin-bottom:24px;">🔒 Confidential — only seen by Dr. Vishaka</p>
 
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;">
           <div>
-            <label style="display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:6px;">Full Name *</label>
+            <label style="display:block;font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px;">Full Name *</label>
             <input id="p-name" type="text" placeholder="Your full name"
-              style="width:100%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:11px 14px;color:#fff;font-family:'Lato',sans-serif;font-size:0.92rem;outline:none;" />
+              style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:11px 14px;color:#fff;font-family:'Lato',sans-serif;font-size:0.92rem;outline:none;" />
           </div>
           <div>
-            <label style="display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:6px;">Age *</label>
+            <label style="display:block;font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px;">Age *</label>
             <input id="p-age" type="number" placeholder="Your age" min="1" max="120"
-              style="width:100%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:11px 14px;color:#fff;font-family:'Lato',sans-serif;font-size:0.92rem;outline:none;" />
+              style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:11px 14px;color:#fff;font-family:'Lato',sans-serif;font-size:0.92rem;outline:none;" />
           </div>
         </div>
-
         <div style="margin-bottom:14px;">
-          <label style="display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:6px;">Phone Number *</label>
+          <label style="display:block;font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px;">Phone Number *</label>
           <input id="p-phone" type="tel" placeholder="10-digit mobile number" maxlength="10"
-            style="width:100%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:11px 14px;color:#fff;font-family:'Lato',sans-serif;font-size:0.92rem;outline:none;" />
+            style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:11px 14px;color:#fff;font-family:'Lato',sans-serif;font-size:0.92rem;outline:none;" />
         </div>
-
         <div style="margin-bottom:14px;">
-          <label style="display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:6px;">Email</label>
+          <label style="display:block;font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px;">Email</label>
           <input id="p-email" type="email" placeholder="your@email.com"
-            style="width:100%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:11px 14px;color:#fff;font-family:'Lato',sans-serif;font-size:0.92rem;outline:none;" />
+            style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:11px 14px;color:#fff;font-family:'Lato',sans-serif;font-size:0.92rem;outline:none;" />
         </div>
-
         <div style="margin-bottom:14px;">
-          <label style="display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:6px;">Main Health Concern *</label>
+          <label style="display:block;font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px;">Main Health Concern *</label>
           <textarea id="p-concern" placeholder="Describe your main health concern..."
-            style="width:100%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:11px 14px;color:#fff;font-family:'Lato',sans-serif;font-size:0.92rem;outline:none;resize:vertical;min-height:80px;"></textarea>
+            style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:11px 14px;color:#fff;font-family:'Lato',sans-serif;font-size:0.92rem;outline:none;resize:vertical;min-height:80px;"></textarea>
         </div>
-
         <div style="margin-bottom:14px;">
-          <label style="display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:6px;">Medical History</label>
-          <textarea id="p-history" placeholder="Any past illnesses, surgeries, conditions..."
-            style="width:100%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:11px 14px;color:#fff;font-family:'Lato',sans-serif;font-size:0.92rem;outline:none;resize:vertical;min-height:70px;"></textarea>
+          <label style="display:block;font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px;">Medical History</label>
+          <textarea id="p-history" placeholder="Past illnesses, surgeries, conditions..."
+            style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:11px 14px;color:#fff;font-family:'Lato',sans-serif;font-size:0.92rem;outline:none;resize:vertical;min-height:70px;"></textarea>
         </div>
-
         <div style="margin-bottom:14px;">
-          <label style="display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:6px;">Current Medications</label>
-          <input id="p-meds" type="text" placeholder="Any medicines you are currently taking"
-            style="width:100%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:11px 14px;color:#fff;font-family:'Lato',sans-serif;font-size:0.92rem;outline:none;" />
+          <label style="display:block;font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px;">Current Medications</label>
+          <input id="p-meds" type="text" placeholder="Any medicines currently taking"
+            style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:11px 14px;color:#fff;font-family:'Lato',sans-serif;font-size:0.92rem;outline:none;" />
         </div>
-
         <div style="margin-bottom:24px;">
-          <label style="display:block;font-size:0.75rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.55);margin-bottom:6px;">How did you hear about us?</label>
-          <select id="p-source"
-            style="width:100%;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:11px 14px;color:#fff;font-family:'Lato',sans-serif;font-size:0.92rem;outline:none;">
-            <option value="" style="background:var(--green-deep);">Select an option</option>
-            <option value="Word of mouth" style="background:var(--green-deep);">Word of mouth</option>
-            <option value="Instagram" style="background:var(--green-deep);">Instagram</option>
-            <option value="Google" style="background:var(--green-deep);">Google</option>
-            <option value="WhatsApp" style="background:var(--green-deep);">WhatsApp</option>
-            <option value="Other" style="background:var(--green-deep);">Other</option>
+          <label style="display:block;font-size:0.72rem;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px;">How did you hear about us?</label>
+          <select id="p-source" style="width:100%;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:11px 14px;color:#fff;font-family:'Lato',sans-serif;font-size:0.92rem;outline:none;">
+            <option value="" style="background:#1a3a1f;">Select an option</option>
+            <option value="Word of mouth" style="background:#1a3a1f;">Word of mouth</option>
+            <option value="Instagram" style="background:#1a3a1f;">Instagram</option>
+            <option value="Google" style="background:#1a3a1f;">Google</option>
+            <option value="WhatsApp" style="background:#1a3a1f;">WhatsApp</option>
+            <option value="Other" style="background:#1a3a1f;">Other</option>
           </select>
         </div>
-
         <button onclick="submitPatientForm()"
-          style="width:100%;background:var(--gold);color:var(--green-deep);border:none;padding:15px;border-radius:50px;font-family:'Lato',sans-serif;font-weight:700;font-size:1rem;cursor:pointer;transition:all 0.3s;">
-          Save Details & Proceed to Payment →
+          style="width:100%;background:var(--gold);color:var(--green-deep);border:none;padding:15px;border-radius:50px;font-family:'Lato',sans-serif;font-weight:700;font-size:1rem;cursor:pointer;">
+          Continue to Payment →
         </button>
-        <p style="font-size:0.75rem;color:rgba(255,255,255,0.35);text-align:center;margin-top:10px;">🔒 Your information is never shared with anyone</p>
-
-        <!-- ERROR MSG -->
+        <p style="font-size:0.75rem;color:rgba(255,255,255,0.3);text-align:center;margin-top:10px;">🔒 Your information is never shared with anyone</p>
         <div id="form-error" style="display:none;margin-top:14px;background:rgba(220,53,69,0.15);border:1px solid rgba(220,53,69,0.3);border-radius:10px;padding:12px 16px;color:#ff6b7a;font-size:0.88rem;"></div>
       </div>
     </div>
 
-    <!-- STEP 2 — PAY FIRST -->
-    <div id="form-step2" style="display:none;max-width:600px;margin:0 auto;">
+    <!-- ══ STEP 2 — PAYMENT ══ -->
+    <div id="form-step2" style="display:none;max-width:520px;margin:0 auto;">
+      <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:20px;padding:36px 32px;text-align:center;">
+        <h3 style="font-family:'Playfair Display',serif;color:var(--gold);font-size:1.3rem;margin-bottom:6px;">Step 2 — Pay ₹500</h3>
+        <p style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin-bottom:28px;">Secure your consultation slot with payment</p>
 
-      <!-- SUCCESS BANNER -->
-      <div style="background:rgba(168,200,74,0.15);border:1px solid rgba(168,200,74,0.4);border-radius:14px;padding:18px 24px;text-align:center;margin-bottom:28px;">
-        <div style="font-size:1.8rem;margin-bottom:6px;">✅</div>
-        <div style="color:#fff;font-weight:700;font-size:1rem;">Details saved! Now complete payment to secure your slot.</div>
-        <div style="color:rgba(255,255,255,0.6);font-size:0.85rem;margin-top:4px;">Your appointment will be confirmed after payment.</div>
-      </div>
+        <div style="color:var(--gold);font-family:'Playfair Display',serif;font-size:2.2rem;font-weight:700;margin-bottom:4px;">₹500</div>
+        <div style="color:rgba(255,255,255,0.5);font-size:0.85rem;margin-bottom:28px;">Nature Cure Consultation Fee</div>
 
-      <!-- PAYMENT CARD -->
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:32px 28px;text-align:center;margin-bottom:20px;">
-        <div style="font-size:2.5rem;margin-bottom:10px;">💳</div>
-        <div style="color:var(--gold);font-family:'Playfair Display',serif;font-size:1.6rem;font-weight:700;margin-bottom:4px;">₹500</div>
-        <div style="color:rgba(255,255,255,0.6);font-size:0.85rem;margin-bottom:24px;">Nature Cure Consultation Fee</div>
+        <!-- RAZORPAY — PRIMARY RECOMMENDED -->
+        <a href="https://rzp.io/rzp/OOQvjsi" target="_blank" onclick="showStep3()"
+          style="display:block;background:var(--gold);color:var(--green-deep);padding:16px;border-radius:50px;text-decoration:none;font-weight:700;font-size:1rem;margin-bottom:8px;box-shadow:0 4px 20px rgba(201,168,76,0.4);">
+          💳 Pay via Razorpay
+        </a>
+        <div style="background:rgba(201,168,76,0.1);border-radius:10px;padding:8px 14px;margin-bottom:20px;">
+          <p style="color:rgba(255,255,255,0.6);font-size:0.78rem;">✅ Cards &nbsp;•&nbsp; NetBanking &nbsp;•&nbsp; UPI &nbsp;•&nbsp; Wallets<br/>Works on mobile & desktop &nbsp;•&nbsp; Auto confirmation</p>
+        </div>
 
-        <!-- UPI ID display -->
-        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:12px 16px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
+        <!-- DIVIDER -->
+        <div style="display:flex;align-items:center;gap:10px;margin:16px 0;">
+          <div style="flex:1;height:1px;background:rgba(255,255,255,0.1);"></div>
+          <span style="color:rgba(255,255,255,0.3);font-size:0.75rem;">or pay directly via UPI</span>
+          <div style="flex:1;height:1px;background:rgba(255,255,255,0.1);"></div>
+        </div>
+
+        <!-- UPI ID COPY -->
+        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);border-radius:10px;padding:12px 16px;margin-bottom:12px;display:flex;align-items:center;justify-content:space-between;">
           <div style="text-align:left;">
-            <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px;">UPI ID</div>
-            <div style="color:#fff;font-weight:700;font-size:1rem;">7758026980@ybl</div>
+            <div style="color:rgba(255,255,255,0.4);font-size:0.68rem;letter-spacing:1px;text-transform:uppercase;">UPI ID</div>
+            <div style="color:#fff;font-weight:700;">7758026980@ybl</div>
           </div>
           <button onclick="copyUPI()" id="copy-btn"
-            style="background:var(--gold);color:var(--green-deep);border:none;padding:8px 16px;border-radius:20px;font-weight:700;font-size:0.8rem;cursor:pointer;">
+            style="background:var(--gold);color:var(--green-deep);border:none;padding:7px 14px;border-radius:20px;font-weight:700;font-size:0.78rem;cursor:pointer;">
             📋 Copy
           </button>
         </div>
 
-        <!-- RAZORPAY — PRIMARY -->
-        <a href="https://rzp.io/rzp/OOQvjsi" target="_blank" onclick="showStep3()"
-          style="display:block;background:var(--gold);color:var(--green-deep);padding:15px;border-radius:50px;text-decoration:none;font-weight:700;font-size:1rem;text-align:center;margin-bottom:8px;box-shadow:0 4px 16px rgba(201,168,76,0.4);">
-          💳 Pay ₹500 — Cards / NetBanking / UPI
-        </a>
-        <p style="color:rgba(255,255,255,0.4);font-size:0.72rem;margin-bottom:14px;">Works on mobile & desktop • All payment methods</p>
-
-        <!-- DIVIDER -->
-        <div style="display:flex;align-items:center;gap:10px;margin:12px 0;">
-          <div style="flex:1;height:1px;background:rgba(255,255,255,0.15);"></div>
-          <span style="color:rgba(255,255,255,0.35);font-size:0.75rem;">or</span>
-          <div style="flex:1;height:1px;background:rgba(255,255,255,0.15);"></div>
-        </div>
-
-        <!-- UPI DEEP LINK — SECONDARY -->
+        <!-- UPI DEEP LINK -->
         <a href="upi://pay?pa=7758026980@ybl&pn=ArogyaSutra&cu=INR&am=500&tn=NatureCureConsultation"
           onclick="showStep3()"
-          style="display:block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:13px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.9rem;text-align:center;">
-          📱 Pay via UPI App (Mobile only)
+          style="display:block;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.12);color:#fff;padding:13px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.88rem;margin-bottom:6px;">
+          📱 Open UPI App (Mobile only)
         </a>
-        <p style="color:rgba(255,255,255,0.3);font-size:0.72rem;margin-top:6px;">Opens GPay / PhonePe / Paytm</p>
+        <p style="color:rgba(255,255,255,0.25);font-size:0.72rem;">Opens GPay / PhonePe / Paytm on your phone</p>
       </div>
-
     </div>
 
-    <!-- STEP 3 — BOOK SLOT (shown after payment clicked) -->
-    <div id="form-step3" style="display:none;max-width:700px;margin:0 auto;">
+    <!-- ══ STEP 3 — BOOK SLOT ══ -->
+    <div id="form-step3" style="display:none;max-width:680px;margin:0 auto;">
 
-      <!-- PAYMENT DONE BANNER -->
-      <div style="background:rgba(168,200,74,0.15);border:1px solid rgba(168,200,74,0.4);border-radius:14px;padding:18px 24px;text-align:center;margin-bottom:28px;">
-        <div style="font-size:1.8rem;margin-bottom:6px;">💚</div>
-        <div style="color:#fff;font-weight:700;font-size:1rem;">Payment initiated! Now book your appointment slot.</div>
-        <div style="color:rgba(255,255,255,0.6);font-size:0.85rem;margin-top:4px;">After booking, send your UTR number on WhatsApp to confirm.</div>
+      <!-- SUCCESS -->
+      <div style="background:rgba(143,184,74,0.12);border:1px solid rgba(143,184,74,0.35);border-radius:14px;padding:20px 24px;text-align:center;margin-bottom:28px;">
+        <div style="font-size:2rem;margin-bottom:8px;">🎉</div>
+        <div style="color:#fff;font-weight:700;font-size:1.05rem;">Payment done! Now pick your appointment slot.</div>
+        <div style="color:rgba(255,255,255,0.55);font-size:0.85rem;margin-top:6px;">
+          Razorpay will email you a payment receipt automatically.<br/>
+          Cal.com will email both of you a calendar invite after booking.
+        </div>
       </div>
 
-      <!-- BOOKING CARDS -->
-      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-bottom:24px;">
-        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:32px 24px;text-align:center;">
-          <div style="font-size:2.5rem;margin-bottom:14px;">📅</div>
-          <h3 style="font-family:'Playfair Display',serif;color:var(--gold);font-size:1.2rem;margin-bottom:10px;">Book via Cal.com</h3>
-          <p style="color:rgba(255,255,255,0.7);font-size:0.88rem;line-height:1.6;margin-bottom:20px;">Pick a date & time. Get instant email confirmation.</p>
+      <!-- BOOKING OPTIONS -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;">
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:18px;padding:28px 24px;text-align:center;">
+          <div style="font-size:2.2rem;margin-bottom:12px;">📅</div>
+          <h3 style="font-family:'Playfair Display',serif;color:var(--gold);font-size:1.1rem;margin-bottom:8px;">Book on Cal.com</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.6;margin-bottom:18px;">See all available slots. Pick your date & time. Get instant calendar invite on email.</p>
           <a href="https://cal.com/arogyasutra/nature-cure-consultation" target="_blank"
-            style="background:var(--gold);color:var(--green-deep);padding:13px 28px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.9rem;display:inline-block;">
-            📅 Book Appointment
+            style="background:var(--gold);color:var(--green-deep);padding:12px 24px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.9rem;display:inline-block;">
+            📅 Pick a Slot
           </a>
         </div>
-        <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.2);border-radius:20px;padding:32px 24px;text-align:center;">
-          <div style="font-size:2.5rem;margin-bottom:14px;">💬</div>
-          <h3 style="font-family:'Playfair Dixon',serif;color:var(--gold);font-size:1.2rem;margin-bottom:10px;">Book via WhatsApp</h3>
-          <p style="color:rgba(255,255,255,0.7);font-size:0.88rem;line-height:1.6;margin-bottom:20px;">Chat directly with Dr. Vishaka to pick your slot.</p>
-          <a id="wa-book-link" href="https://wa.me/917758026980" target="_blank"
-            style="background:#25D366;color:#fff;padding:13px 28px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.9rem;display:inline-block;">
-            💬 Chat on WhatsApp
+        <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:18px;padding:28px 24px;text-align:center;">
+          <div style="font-size:2.2rem;margin-bottom:12px;">💬</div>
+          <h3 style="font-family:'Playfair Display',serif;color:var(--gold);font-size:1.1rem;margin-bottom:8px;">Book on WhatsApp</h3>
+          <p style="color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.6;margin-bottom:18px;">Prefer to chat? Message Dr. Vishaka directly with your preferred time and she'll confirm.</p>
+          <a id="wa-book-link" href="https://wa.me/917758026980?text=Hello%20Dr.%20Vishaka!%20I%20have%20completed%20payment%20of%20%E2%82%B9500.%20Please%20confirm%20my%20appointment%20slot."
+            target="_blank"
+            style="background:#25D366;color:#fff;padding:12px 24px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.9rem;display:inline-block;">
+            💬 Message on WhatsApp
           </a>
         </div>
       </div>
 
-      <!-- SEND UTR -->
-      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.15);border-radius:14px;padding:20px 24px;text-align:center;">
-        <div style="color:#fff;font-weight:700;margin-bottom:8px;">📋 Last step — send your UTR number</div>
-        <p style="color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.6;margin-bottom:14px;">After paying, your UPI app shows a UTR / Transaction ID. Send it to confirm your appointment.</p>
-        <a href="https://wa.me/917758026980?text=Hello%20Dr.%20Vishaka!%20I%20have%20paid%20%E2%82%B9500%20for%20my%20consultation.%20My%20UTR%20is%3A%20%5BPaste%20here%5D"
-          target="_blank"
-          style="background:#25D366;color:#fff;padding:12px 24px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.88rem;display:inline-block;">
-          💬 Send UTR on WhatsApp
-        </a>
+      <!-- WHAT HAPPENS NEXT -->
+      <div style="margin-top:24px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:20px 24px;">
+        <div style="color:rgba(255,255,255,0.5);font-size:0.8rem;text-align:center;line-height:1.8;">
+          📧 <strong style="color:rgba(255,255,255,0.7);">Razorpay</strong> emails you payment receipt automatically &nbsp;•&nbsp;
+          📅 <strong style="color:rgba(255,255,255,0.7);">Cal.com</strong> emails calendar invite to both of you &nbsp;•&nbsp;
+          ✅ <strong style="color:rgba(255,255,255,0.7);">No WhatsApp screenshots needed!</strong>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
-
-<!-- PAYMENT -->
-<section id="payment">
-  <div class="container">
-    <div class="section-label">Secure Payment</div>
-    <h2 class="section-title">Pay Your Consultation Fee</h2>
-    <p class="section-sub">After booking your slot on Cal.com, complete payment here to confirm your appointment.</p>
-
-    <div class="payment-box">
-
-      <!-- STEP INDICATOR -->
-      <div style="display:flex;align-items:center;justify-content:center;gap:0;margin-bottom:32px;flex-wrap:wrap;">
-        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-          <div style="width:40px;height:40px;background:var(--green-deep);border:2px solid var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--gold);font-weight:700;">✓</div>
-          <span style="font-size:0.72rem;color:var(--text-mid);text-align:center;">Book slot<br/>on Cal.com</span>
-        </div>
-        <div style="width:40px;height:2px;background:var(--gold);margin-bottom:20px;"></div>
-        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-          <div style="width:40px;height:40px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--green-deep);font-weight:700;font-size:1rem;">2</div>
-          <span style="font-size:0.72rem;color:var(--text-mid);text-align:center;">Pay ₹500<br/>via UPI</span>
-        </div>
-        <div style="width:40px;height:2px;background:#ddd;margin-bottom:20px;"></div>
-        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-          <div style="width:40px;height:40px;background:#eee;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#999;font-weight:700;font-size:1rem;">3</div>
-          <span style="font-size:0.72rem;color:#999;text-align:center;">Share UTR<br/>on WhatsApp</span>
-        </div>
-        <div style="width:40px;height:2px;background:#ddd;margin-bottom:20px;"></div>
-        <div style="display:flex;flex-direction:column;align-items:center;gap:6px;">
-          <div style="width:40px;height:40px;background:#eee;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#999;font-weight:700;font-size:1rem;">4</div>
-          <span style="font-size:0.72rem;color:#999;text-align:center;">Appointment<br/>confirmed!</span>
-        </div>
-      </div>
-
-      <!-- UPI PAYMENT BOX -->
-      <div style="background:var(--green-deep);border-radius:16px;padding:28px;margin-bottom:20px;">
-        <div style="font-size:2.5rem;margin-bottom:10px;">💳</div>
-        <div style="color:var(--gold);font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;margin-bottom:4px;">₹500</div>
-        <div style="color:rgba(255,255,255,0.7);font-size:0.85rem;margin-bottom:20px;">Nature Cure Consultation Fee</div>
-
-        <!-- UPI ID display -->
-        <div style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-radius:10px;padding:12px 16px;margin-bottom:20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;">
-          <div>
-            <div style="color:rgba(255,255,255,0.5);font-size:0.7rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:2px;">UPI ID</div>
-            <div style="color:#fff;font-weight:700;font-size:1rem;letter-spacing:0.5px;">7758026980@ybl</div>
-          </div>
-          <button onclick="copyUPI()" id="copy-btn"
-            style="background:var(--gold);color:var(--green-deep);border:none;padding:8px 16px;border-radius:20px;font-weight:700;font-size:0.8rem;cursor:pointer;">
-            📋 Copy
-          </button>
-        </div>
-
-        <!-- RAZORPAY BUTTON — recommended -->
-        <a href="https://rzp.io/rzp/OOQvjsi" target="_blank"
-          id="razorpay-btn"
-          style="display:block;background:var(--gold);color:var(--green-deep);padding:15px;border-radius:50px;text-decoration:none;font-weight:700;font-size:1rem;text-align:center;margin-top:16px;margin-bottom:8px;box-shadow:0 4px 16px rgba(201,168,76,0.4);">
-          💳 Pay ₹500 — Cards / NetBanking / UPI (Recommended)
-        </a>
-        <p style="color:rgba(255,255,255,0.45);font-size:0.75rem;text-align:center;margin-bottom:12px;">Works on mobile & desktop • Auto confirmation • All payment methods</p>
-
-        <!-- DIVIDER -->
-        <div style="display:flex;align-items:center;gap:10px;margin:12px 0;">
-          <div style="flex:1;height:1px;background:rgba(255,255,255,0.15);"></div>
-          <span style="color:rgba(255,255,255,0.35);font-size:0.75rem;">or pay directly via UPI</span>
-          <div style="flex:1;height:1px;background:rgba(255,255,255,0.15);"></div>
-        </div>
-
-        <!-- SINGLE PAY BUTTON -->
-        <a href="upi://pay?pa=7758026980@ybl&pn=ArogyaSutra&cu=INR&am=500&tn=NatureCureConsultation"
-          style="display:block;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.2);color:#fff;padding:13px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.9rem;text-align:center;margin-bottom:10px;">
-          📱 Pay via UPI App (Mobile only)
-        </a>
-        <p style="color:rgba(255,255,255,0.35);font-size:0.72rem;text-align:center;margin-bottom:4px;">Opens GPay / PhonePe / Paytm on your phone</p>
-
-      </div>
-
-      <!-- AFTER PAYMENT - SEND UTR -->
-      <div style="background:#f0faf4;border:1px solid #c3e6cb;border-radius:14px;padding:20px 24px;text-align:left;">
-        <div style="font-weight:700;color:var(--green-deep);margin-bottom:8px;font-size:0.95rem;">✅ After paying — send your UTR to confirm</div>
-        <p style="color:var(--text-mid);font-size:0.88rem;line-height:1.6;margin-bottom:14px;">
-          Once payment is done, your UPI app will show a <strong>UTR / Transaction ID</strong> (12-digit number). Send it to us on WhatsApp to confirm your appointment.
-        </p>
-        <a href="https://wa.me/917758026980?text=Hello%20Dr.%20Vishaka!%20I%20have%20completed%20the%20payment%20of%20%E2%82%B9500%20for%20my%20Nature%20Cure%20Consultation.%20My%20UTR%20number%20is%3A%20%5BPaste%20UTR%20here%5D.%20Please%20confirm%20my%20appointment."
-          target="_blank"
-          style="background:#25D366;color:#fff;padding:12px 24px;border-radius:50px;text-decoration:none;font-weight:700;font-size:0.88rem;display:inline-flex;align-items:center;gap:8px;">
-          💬 Send UTR on WhatsApp
-        </a>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
 <section id="testimonials">
   <div class="container">
     <div class="section-label">Patient Stories</div>
@@ -1276,17 +1171,35 @@
     );
     document.getElementById('wa-book-link').href = `https://wa.me/917758026980?text=${waMsg}`;
 
-    // ── SHOW STEP 2 ──
+  // ── SHOW STEP 2 (Payment) ──
     document.getElementById('form-step1').style.display = 'none';
     document.getElementById('form-step2').style.display = 'block';
-    document.getElementById('s1').textContent = '✓';
+    document.getElementById('s1').innerHTML = '✓';
     document.getElementById('s1').style.background = '#8fb84a';
     document.getElementById('s2').style.background = 'var(--gold)';
     document.getElementById('s2').style.color = 'var(--green-deep)';
     document.getElementById('s2').style.border = 'none';
     document.getElementById('s2-label').style.color = 'var(--gold)';
     document.getElementById('s2-label').style.fontWeight = '700';
+    document.getElementById('line1').style.background = '#8fb84a';
     window.scrollTo({ top: document.getElementById('booking').offsetTop - 80, behavior: 'smooth' });
+  }
+
+  // ── SHOW STEP 3 (Book Slot) ──
+  function showStep3() {
+    setTimeout(() => {
+      document.getElementById('form-step2').style.display = 'none';
+      document.getElementById('form-step3').style.display = 'block';
+      document.getElementById('s2').innerHTML = '✓';
+      document.getElementById('s2').style.background = '#8fb84a';
+      document.getElementById('s3').style.background = 'var(--gold)';
+      document.getElementById('s3').style.color = 'var(--green-deep)';
+      document.getElementById('s3').style.border = 'none';
+      document.getElementById('s3-label').style.color = 'var(--gold)';
+      document.getElementById('s3-label').style.fontWeight = '700';
+      document.getElementById('line2').style.background = '#8fb84a';
+      window.scrollTo({ top: document.getElementById('booking').offsetTop - 80, behavior: 'smooth' });
+    }, 400);
   }
 
   // ═══════════════════════════════════════════════
