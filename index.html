@@ -605,7 +605,7 @@
   <ul class="nav-links">
     <li><a href="#services">Services</a></li>
     <li><a href="#booking">Book</a></li>
-    <li><a href="#payment">Pay</a></li>
+    <li><a href="#faq">FAQ</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#booking" class="nav-book">Book Now</a></li>
   </ul>
@@ -947,6 +947,112 @@
     </div>
   </div>
 </section>
+<!-- FAQ -->
+<section id="faq" style="background:#fff;padding:90px 20px;">
+  <div class="container">
+    <div class="section-label">Got Questions?</div>
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <p class="section-sub">Everything you need to know before booking your consultation.</p>
+    <div style="max-width:720px;margin:0 auto;display:flex;flex-direction:column;gap:12px;">
+
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-q"><span>💰 What is the consultation fee?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">The consultation fee is <strong>₹500</strong> per session. This covers a full personalised assessment with Dr. Vishaka and a customised natural treatment plan.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-q"><span>⏱️ How long is a session?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">Each consultation is <strong>30 minutes</strong>. Dr. Vishaka focuses on understanding your key health concern and gives you a clear, actionable natural treatment plan.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-q"><span>🌐 Are online consultations available?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes! Consultations are available both <strong>in-person and online</strong> via video call. Choose your preferred mode when booking on Cal.com.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-q"><span>💳 How do I pay?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">You can pay via <strong>Razorpay</strong> (cards, netbanking, UPI, wallets) or directly via <strong>UPI</strong> (GPay, PhonePe, Paytm) using the QR code on the booking page.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-q"><span>🔄 Can I reschedule my appointment?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">Yes! You can reschedule by messaging Dr. Vishaka on <strong>WhatsApp at 7758026980</strong> at least 24 hours before your appointment.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-q"><span>💊 Do I need to stop my medications?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a"><strong>No, never stop medications without consulting your doctor.</strong> Arogya Sutra's treatments are complementary and work alongside your existing medications safely.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-q"><span>🌿 What conditions do you treat?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">We help with <strong>thyroid disorders, diabetes, hypertension, obesity, stress, anxiety, digestive issues, skin problems, PCOD</strong> and general lifestyle improvement through natural methods.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-q"><span>📋 What should I bring to my consultation?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">Please have your recent <strong>medical reports, list of current medications</strong> and a brief note of your main health concerns ready. For online sessions, just ensure a stable internet connection.</div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFAQ(this)">
+        <div class="faq-q"><span>📞 How can I contact Dr. Vishaka?</span><span class="faq-icon">+</span></div>
+        <div class="faq-a">You can reach Dr. Vishaka on <strong>WhatsApp or call at 7758026980</strong>. She typically responds within a few hours during clinic hours (Mon–Sat, 9AM–6PM).</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+.faq-item {
+  background: var(--cream);
+  border: 1px solid rgba(26,58,31,0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+.faq-item:hover { box-shadow: 0 4px 16px rgba(26,58,31,0.1); }
+.faq-q {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+  font-weight: 700;
+  color: var(--green-deep);
+  font-size: 0.95rem;
+  gap: 12px;
+}
+.faq-icon {
+  font-size: 1.4rem;
+  color: var(--green-light);
+  transition: transform 0.3s;
+  flex-shrink: 0;
+  font-weight: 300;
+}
+.faq-a {
+  display: none;
+  padding: 0 22px 18px;
+  color: var(--text-mid);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  border-top: 1px solid rgba(26,58,31,0.06);
+  padding-top: 14px;
+}
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-icon { transform: rotate(45deg); color: var(--green-deep); }
+.faq-item.open { border-color: rgba(26,58,31,0.25); box-shadow: 0 4px 16px rgba(26,58,31,0.1); }
+</style>
+
+<script>
+function toggleFAQ(el) {
+  const isOpen = el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) el.classList.add('open');
+}
+</script>
+
 <section id="testimonials">
   <div class="container">
     <div class="section-label">Patient Stories</div>
